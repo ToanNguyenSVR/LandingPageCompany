@@ -1,0 +1,111 @@
+{
+  "Index": {
+    "header": {
+      "home": "Trang chủ",
+      "usage": "Cách dùng",
+      "location": "Chi nhánh",
+      "frame": "Sản phẩm",
+      "app": "Ứng dụng",
+      "franchise": "Nhượng quyền"
+    },
+    "home": {
+      "title": {
+        "part1": "GIỚI THIỆU VỀ",
+        "part2": "PHOTO TIME"
+      },
+      "content": "PHOTO TIME - Studio tự chụp phong cách Hàn Quốc, trào lưu văn hóa đang được hầu hết giới trẻ Việt Nam yêu thích và lựa chọn. Tại PHOTO TIME, chúng tôi không đơn thuần chỉ là studio chụp ảnh mà còn là nơi giúp mang đến cho bạn những niềm vui bất tận và lưu giữ khoảnh khắc kỉ niệm cho riêng mình. Hiện nay, PHOTO TIME đã có 14 chi nhánh tại các thành phố lớn: Hồ Chí Minh, Hà Nội, Nghệ An và sẽ tiếp tục mở rộng hệ thống cửa hàng trong thời gian tới. ",
+      "room": {
+        "basic": "Color room",
+        "banbe": "Banbe room",
+        "high": "High angle"
+      },
+      "color": {
+        "pink": "Pink Room",
+        "blue": "Blue Room",
+        "gray": "Gray Room"
+      },
+      "type": "Các loại phòng chụp"
+    },
+    "usage": {
+      "title": "CÁCH DÙNG",
+      "content": {
+        "booth": "Cách sử dụng PhotoBooth",
+        "app": "In ảnh từ App",
+        "download": "Quét mã QR"
+      }
+    },
+    "app": {
+      "title": "ỨNG DỤNG"
+    },
+    "frame": {
+      "title": "SẢN PHẨM"
+    },
+    "franchise": {
+      "title": "NHƯỢNG QUYỀN THƯƠNG HIỆU"
+    },
+    "location": {
+      "title": "CHI NHÁNH",
+      "all": "Tất cả",
+      "SG": "TP. Hồ Chí Minh",
+      "HN": "Hà Nội",
+      "Vinh": "Vinh"
+    },
+    "footer": {
+      "address": "39 Nguyễn Gia Trí, Phường 25, Quận Bình Thạnh, Thành phố Hồ Chí Minh, Việt Nam"
+    },
+    "followUs": "Theo dõi chúng tôi trên mạng xã hội",
+    "moreButton": "Xem thêm",
+    "form": {
+      "name": "Họ và tên",
+      "email": "Email",
+      "phone": "Số điện thoại",
+      "budget": "Kinh phí dự tính đầu tư",
+      "province": "Tỉnh/Thành phố",
+      "district": "Quận/Huyện",
+      "ward": "Phường/Xã",
+      "address": "Địa chỉ chi tiết",
+      "policyAgreement": "Tôi đồng ý với chính sách thu thập và sử dụng thông tin cá nhân",
+      "readMore": "Đọc thêm",
+      "reject": "Gửi thành công! Vui lòng check mail phản hồi từ chúng tôi!",
+      "success": "Gửi thành công! Cảm ơn bạn đã quan tâm đến thương hiệu của chúng tôi!",
+      "send": "Gửi"
+    },
+    "validation": {
+      "required": {
+        "name": "Tên là bắt buộc",
+        "phone": "Số điện thoại là bắt buộc",
+        "email": "Email là bắt buộc",
+        "budget": "Kinh phí dự trù là bắt buộc",
+        "province": "Tỉnh/Thành phố là bắt buộc",
+        "district": "Quận/Huyện là bắt buộc",
+        "ward": "Phường/Xã là bắt buộc",
+        "address": "Địa chỉ chi tiết là bắt buộc",
+        "policyAgreement": "Bạn phải đồng ý với chính sách thu thập và sử dụng thông tin cá nhân"
+      },
+      "invalid": {
+        "email": "Email không hợp lệ"
+      }
+    },
+    "LocaleSwitcher": {
+      "label": "Change language",
+      "locale": "{locale, select, en {EN} vi {VI} other {KO}}"
+    },
+    "modal": {
+      "title": "Chính sách thu thập và sử dụng thông tin cá nhân",
+      "content1": "Mục đích thu thập và sử dụng thông tin cá nhân\n\n1. Hướng dẫn thông tin giải đáp thắc mắc về cung cấp dịch vụ, thực hiện hợp đồng cung cấp dịch vụ và cung cấp nội dung dịch vụ\n\n2. Phát triển dịch vụ mới và cung cấp nội dung chuyên biệt\n\nMục và phương pháp thu thập thông tin cá nhân được thu thập\n\n1. Các hạng mục thông tin cá nhân được thu thập\n\n1.1. Công ty thu thập thông tin cá nhân sau đây cho các ứng dụng dịch vụ, v.v.\n\n*********Các mục bắt buộc*********\n\n",
+      "content2": "• Tên công ty, người phụ trách, thông tin liên hệ, email\n\n1.2. Thông tin sau có thể được tạo và thu thập tự động trong quá trình sử dụng dịch vụ hoặc xử lý kinh doanh.\n\n",
+      "content3": "Truy cập thông tin IP, cookie, nhật ký truy cập\n\n2. Cách thu thập thông tin cá nhân\n\n• Yêu cầu tư vấn sản xuất qua website\n\nThời gian lưu giữ và sử dụng thông tin cá nhân\n\n",
+      "content4": "Về nguyên tắc, thông tin cá nhân của người dùng sẽ bị hủy ngay lập tức sau khi đạt được mục đích thu thập và sử dụng thông tin cá nhân. Tuy nhiên, nếu việc lưu giữ là cần thiết theo quy định của pháp luật và các quy định có liên quan, công ty sẽ lưu giữ thông tin thành viên trong một khoảng thời gian nhất định được quy định trong các quy định và pháp luật có liên quan như sau.\n\n",
+      "content5": "1. Lý do lưu giữ thông tin theo chính sách nội bộ công ty\n\n1.1 Thời gian lưu giữ thông tin cá nhân khi đăng ký làm thành viên như sau.\n\n• Lý do bảo quản: Nhận dạng cá nhân và ngăn chặn việc sử dụng trái phép\n\n• Thời gian lưu giữ: 5 năm\n\n",
+      "content6": "1.2 Thời gian lưu giữ thông tin cá nhân khi rút tư cách thành viên như sau.\n\n• Lý do bảo quản: Ngăn chặn việc sử dụng trái phép\n\n• Thời gian lưu giữ: 1 năm\n\n",
+      "content7": "2. Lý do lưu giữ thông tin theo quy định của pháp luật có liên quan\n\nNếu việc lưu giữ là cần thiết theo quy định của pháp luật liên quan, chẳng hạn như Đạo luật Thương mại và Đạo luật Bảo vệ Người tiêu dùng trong Thương mại Điện tử, v.v., công ty sẽ lưu trữ thông tin thành viên trong một khoảng thời gian nhất định theo quy định của pháp luật liên quan. Trong trường hợp này, công ty chỉ sử dụng thông tin được lưu trữ cho mục đích lưu trữ và thời gian lưu giữ như sau.\n\n",
+      "content8": "2.1. Hồ sơ về hợp đồng hoặc rút tiền đăng ký, v.v.\n\n• Lý do giữ lại: Đạo luật bảo vệ người tiêu dùng trong thương mại điện tử, v.v.\n\n• Thời gian lưu giữ: 5 năm\n\n",
+      "content9": "2.2. Hồ sơ thanh toán và cung cấp hàng hóa, v.v.\n\n• Lý do giữ lại: Đạo luật bảo vệ người tiêu dùng trong thương mại điện tử, v.v.\n\n• Thời gian lưu giữ: 5 năm\n\n",
+      "content10": "2.3. Hồ sơ giao dịch tài chính điện tử\n\n• Lý do bảo tồn: Đạo luật giao dịch tài chính điện tử\n\n• Thời gian lưu giữ: 5 năm\n\n",
+      "content11": "2.4. Hồ sơ khiếu nại của người tiêu dùng hoặc giải quyết tranh chấp\n\n• Lý do giữ lại: Đạo luật bảo vệ người tiêu dùng trong thương mại điện tử, v.v.\n\n• Thời gian lưu giữ: 3 năm\n\n",
+      "content12": "2.5. Hồ sơ liên quan đến xác minh danh tính\n\n• Lý do bảo tồn: Đạo luật khuyến khích sử dụng mạng thông tin và truyền thông và bảo vệ thông tin, v.v.\n\n• Thời gian lưu giữ: 1 năm\n\n",
+      "content13": "2.6. hồ sơ các chuyến thăm\n\n• Lý do bảo tồn: Đạo luật khuyến khích sử dụng mạng thông tin và truyền thông và bảo vệ thông tin, v.v.\n\n• Thời gian lưu giữ: 3 tháng\n\n*********Điều khoản bổ sung*********\n\n",
+      "content14": "Các Điều khoản này đã được sửa đổi vào ngày 1 tháng 7 năm 2024.\n\nCác điều khoản và điều kiện này sẽ có hiệu lực từ ngày 1 tháng 7 năm 2024."
+    }
+  }
+}

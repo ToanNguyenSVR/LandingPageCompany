@@ -1,0 +1,111 @@
+{
+  "Index": {
+    "header": {
+      "home": "Home",
+      "usage": "How to use",
+      "location": "Location",
+      "frame": "Product",
+      "app": "Download",
+      "franchise": "Franchise"
+    },
+    "home": {
+      "title": {
+        "part1": "ABOUT US",
+        "part2": "PHOTO TIME"
+      },
+      "content": "PHOTO TIME - A self-photography studio in Korean style, a cultural trend that is being loved and chosen by most Vietnamese youth. At PHOTO TIME, we are not just a photo studio but also a place that brings you endless joy and preserves personal memorable moments. Currently, PHOTO TIME has 14 branches in major cities: Ho Chi Minh, Hanoi, Nghe An, and we will continue to expand our store system in the near future.",
+      "room": {
+        "basic": "Color room",
+        "banbe": "Banbe room",
+        "high": "High angle"
+      },
+      "color": {
+        "pink": "Pink Room",
+        "blue": "Blue Room",
+        "gray": "Gray Room"
+      },
+      "type": "PHOTOBOOTHS"
+    },
+    "usage": {
+      "title": "HOW TO USE",
+      "content": {
+        "booth": "How to use Photobooth",
+        "app": "Print photos in mobile app",
+        "download": "Scan QR code and download photos"
+      }
+    },
+    "app": {
+      "title": "APPLICATION"
+    },
+    "frame": {
+      "title": "PRODUCT"
+    },
+    "franchise": {
+      "title": "FRANCHISE"
+    },
+    "location": {
+      "title": "LOCATION",
+      "all": "All locations",
+      "SG": "Ho Chi Minh City",
+      "HN": "Ha Noi",
+      "Vinh": "Vinh City"
+    },
+    "footer": {
+      "address": "39 Nguyen Gia Tri, 25 Ward, Binh Thanh District, Ho Chi Minh City, Vietnam"
+    },
+    "followUs": "FOLLOW US ON SOCIAL MEDIA",
+    "moreButton": "More",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone number",
+      "budget": "Budget",
+      "province": "Province",
+      "district": "District",
+      "ward": "Ward",
+      "address": "Address detail",
+      "policyAgreement": "I agree with terms and conditions and privacy policy",
+      "readMore": "Read more",
+      "reject": "Success! Please check your email!",
+      "success": "Success! Thank you for your interest!",
+      "send": "Send"
+    },
+    "validation": {
+      "required": {
+        "name": "Name is required",
+        "phone": "Phone number is required",
+        "email": "Email is required",
+        "budget": "Estimated budget is required",
+        "province": "Province/City is required",
+        "district": "District is required",
+        "ward": "Ward is required",
+        "address": "Detailed address is required",
+        "policyAgreement": "You must agree to the policy for collecting and using personal information"
+      },
+      "invalid": {
+        "email": "Invalid email"
+      }
+    },
+    "LocaleSwitcher": {
+      "label": "Change language",
+      "locale": "{locale, select, en {EN} vi {VI} other {KO}}"
+    },
+    "modal": {
+      "title": "Privacy Policy",
+      "content1": "Purpose of Collecting and Using Personal Information\n\n1. Provide information to answer questions about the service, fulfill service contracts, and provide service content\n\n2. Develop new services and provide specialized content\n\nMethods and Items of Personal Information Collected\n\n1. Items of personal information collected\n\n1.1. The company collects the following personal information for service applications, etc.\n\n*********Required Items*********\n\n",
+      "content2": "• Company name, contact person, contact information, email\n\n1.2. Information that may be automatically created and collected during the use of the service or business processing.\n\n",
+      "content3": "Access information IP, cookie, access log\n\n2. Methods of collecting personal information\n\n• Request consultation for production through the website\n\nRetention and Use Period of Personal Information\n\n",
+      "content4": "In principle, the user's personal information will be destroyed immediately after achieving the purpose of collecting and using the personal information. However, if retention is required by law or relevant regulations, the company will retain member information for a certain period as specified by the relevant laws and regulations.\n\n",
+      "content5": "1. Reasons for retention according to the company's internal policies\n\n1.1 Retention period of personal information when registering as a member.\n\n• Reason for retention: Identify individuals and prevent unauthorized use\n\n• Retention period: 5 years\n\n",
+      "content6": "1.2 Retention period of personal information when withdrawing membership.\n\n• Reason for retention: Prevent unauthorized use\n\n• Retention period: 1 year\n\n",
+      "content7": "2. Reasons for retention according to relevant laws and regulations\n\nIf retention is necessary according to relevant laws, such as the Commercial Act and the Act on Consumer Protection in Electronic Commerce, the company will store member information for a certain period as specified by the relevant laws. In this case, the company uses the stored information only for the purpose of storage and the retention period as follows.\n\n",
+      "content8": "2.1. Records on contracts or withdrawal of subscriptions, etc.\n\n• Reason for retention: Act on Consumer Protection in Electronic Commerce\n\n• Retention period: 5 years\n\n",
+      "content9": "2.2. Records on payment and supply of goods, etc.\n\n• Reason for retention: Act on Consumer Protection in Electronic Commerce\n\n• Retention period: 5 years\n\n",
+      "content10": "2.3. Records on electronic financial transactions\n\n• Reason for retention: Electronic Financial Transactions Act\n\n• Retention period: 5 years\n\n",
+      "content11": "2.4. Records on consumer complaints or dispute resolution\n\n• Reason for retention: Act on Consumer Protection in Electronic Commerce\n\n• Retention period: 3 years\n\n",
+      "content12": "2.5. Records related to identity verification\n\n• Reason for retention: Act on Promotion of Information and Communications Network Utilization and Information Protection\n\n• Retention period: 1 year\n\n",
+      "content13": "2.6. Records of visits\n\n• Reason for retention: Act on Promotion of Information and Communications Network Utilization and Information Protection\n\n• Retention period: 3 months\n\n*********Additional Clauses*********\n\n",
+      "content14": "These terms and conditions were amended on July 1, 2024.\n\nThese terms and conditions will take effect from July 1, 2024."
+    }
+  }
+}
