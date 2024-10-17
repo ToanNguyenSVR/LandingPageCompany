@@ -18,7 +18,7 @@ export const LocationInfo = ({
   linkgoogleMap,
 }: LocationInfoProps) => {
   const handleRenderText = (value: string) => {
-    if (value.length > 50) {
+    if (value?.length > 50) {
       return value.slice(0, 50) + "...";
     }
     return value;
