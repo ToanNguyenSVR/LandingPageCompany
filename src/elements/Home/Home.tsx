@@ -19,6 +19,7 @@ import About1 from "@/assets/intro1.jpg";
 import About2 from "@/assets/intro2.jpg";
 import About3 from "@/assets/intro3.jpg";
 import About4 from "@/assets/intro4.jpg";
+import AdBanner from "@/components/Adsense/AdBanner";
 
 const HomePage = () => {
   const t = useTranslations("Index");
@@ -89,145 +90,152 @@ const HomePage = () => {
   });
 
   return (
-    <Box
-      height={"100%"}
-      id="home"
-      alignItems={"center"}
-      justifyContent={"center"}
-      display={"flex"}
-      flexDirection={"column"}
-    >
-      <Image alt="banner" src={Banner} layout="intrinsic" />
+    <>
+      <AdBanner
+        dataAdFormat="auto"
+        dataFullWidthResponsive={true}
+        dataAdSlot="4284247248"
+      />
+      <Box
+        height={"100%"}
+        id="home"
+        alignItems={"center"}
+        justifyContent={"center"}
+        display={"flex"}
+        flexDirection={"column"}
+      >
+        <Image alt="banner" src={Banner} layout="intrinsic" />
 
-      <Box
-        position={"relative"}
-        display={"flex"}
-        justifyContent={"center"}
-        alignItems={"center"}
-        my={5}
-        sx={{ width: "33%" }}
-      >
-        <Image alt="slogan" src={Slogan} layout="responsive" />
-      </Box>
-      <animated.div ref={contentRef}>
         <Box
-          paddingX={8}
-          gap={8}
+          position={"relative"}
           display={"flex"}
-          flexDirection={{ xs: "column", md: "row" }}
-          alignItems={"center"}
           justifyContent={"center"}
+          alignItems={"center"}
+          my={5}
+          sx={{ width: "33%" }}
         >
-          <Box
-            ref={sliderRef}
-            sx={{
-              width: { xs: "100%", md: "50%" },
-              display: "flex",
-              overflow: "hidden",
-              scrollSnapType: "x mandatory",
-            }}
-          >
-            {aboutImages.map((img, index) => (
-              <Box
-                key={index}
-                flexShrink={0}
-                width="100%"
-                sx={{ scrollSnapAlign: "center" }}
-              >
-                <Image alt="about" src={img} layout="responsive" />
-              </Box>
-            ))}
-          </Box>
-          <Box
-            display={"flex"}
-            flexDirection={"column"}
-            justifyContent={"center"}
-            width={{ xs: "100%", md: "50%" }}
-          >
-            {contentTrail.map((props, index) => (
-              <animated.div key={index} style={props}>
-                {index === 0 && (
-                  <Typography
-                    variant="h1"
-                    fontWeight={700}
-                    color="text.secondary"
-                  >
-                    {t("home.title.part1")}
-                  </Typography>
-                )}
-                {index === 1 && (
-                  <Typography
-                    variant="h1"
-                    fontWeight={700}
-                    color="text.secondary"
-                  >
-                    {t("home.title.part2")}
-                  </Typography>
-                )}
-                {index === 2 && (
-                  <Typography variant="body1" paragraph>
-                    {t("home.content")}
-                  </Typography>
-                )}
-              </animated.div>
-            ))}
-          </Box>
+          <Image alt="slogan" src={Slogan} layout="responsive" />
         </Box>
-      </animated.div>
-      <Box
-        justifyContent={"center"}
-        display={"flex"}
-        alignContent={"center"}
-        alignItems={"center"}
-        marginTop={10}
-        width={"100%"}
-        position="relative"
-        py="15vh"
-      >
-        <Image alt="cloud" src={CloudBg} layout="fill" objectFit="fill" />
-        <div ref={roomsRef}>
+        <animated.div ref={contentRef}>
           <Box
-            position={"relative"}
+            paddingX={8}
+            gap={8}
             display={"flex"}
-            flexDirection={"column"}
-            alignContent={"center"}
+            flexDirection={{ xs: "column", md: "row" }}
             alignItems={"center"}
-            textAlign={"center"}
+            justifyContent={"center"}
           >
-            <animated.div style={roomsTrail[0]}>
-              <Typography
-                textTransform={"uppercase"}
-                fontSize={{ xs: "2rem", md: "3rem" }}
-                fontWeight={700}
-                color="secondary"
-                marginBottom={10}
-              >
-                {t("home.type")}
-              </Typography>
-            </animated.div>
-            <Grid
-              alignItems={"center"}
-              container
-              spacing={4}
-              justifyContent="center"
+            <Box
+              ref={sliderRef}
+              sx={{
+                width: { xs: "100%", md: "50%" },
+                display: "flex",
+                overflow: "hidden",
+                scrollSnapType: "x mandatory",
+              }}
             >
-              {roomItems.map((item, index) => (
-                <Grid item key={index} alignItems="center">
-                  <animated.div style={roomsTrail[index + 1]}>
-                    <Photobooth
-                      src={item.src}
-                      alt={item.alt}
-                      text={item.text}
-                      href={item.href}
-                    />
-                  </animated.div>
-                </Grid>
+              {aboutImages.map((img, index) => (
+                <Box
+                  key={index}
+                  flexShrink={0}
+                  width="100%"
+                  sx={{ scrollSnapAlign: "center" }}
+                >
+                  <Image alt="about" src={img} layout="responsive" />
+                </Box>
               ))}
-            </Grid>
+            </Box>
+            <Box
+              display={"flex"}
+              flexDirection={"column"}
+              justifyContent={"center"}
+              width={{ xs: "100%", md: "50%" }}
+            >
+              {contentTrail.map((props, index) => (
+                <animated.div key={index} style={props}>
+                  {index === 0 && (
+                    <Typography
+                      variant="h1"
+                      fontWeight={700}
+                      color="text.secondary"
+                    >
+                      {t("home.title.part1")}
+                    </Typography>
+                  )}
+                  {index === 1 && (
+                    <Typography
+                      variant="h1"
+                      fontWeight={700}
+                      color="text.secondary"
+                    >
+                      {t("home.title.part2")}
+                    </Typography>
+                  )}
+                  {index === 2 && (
+                    <Typography variant="body1" paragraph>
+                      {t("home.content")}
+                    </Typography>
+                  )}
+                </animated.div>
+              ))}
+            </Box>
           </Box>
-        </div>
+        </animated.div>
+        <Box
+          justifyContent={"center"}
+          display={"flex"}
+          alignContent={"center"}
+          alignItems={"center"}
+          marginTop={10}
+          width={"100%"}
+          position="relative"
+          py="15vh"
+        >
+          <Image alt="cloud" src={CloudBg} layout="fill" objectFit="fill" />
+          <div ref={roomsRef}>
+            <Box
+              position={"relative"}
+              display={"flex"}
+              flexDirection={"column"}
+              alignContent={"center"}
+              alignItems={"center"}
+              textAlign={"center"}
+            >
+              <animated.div style={roomsTrail[0]}>
+                <Typography
+                  textTransform={"uppercase"}
+                  fontSize={{ xs: "2rem", md: "3rem" }}
+                  fontWeight={700}
+                  color="secondary"
+                  marginBottom={10}
+                >
+                  {t("home.type")}
+                </Typography>
+              </animated.div>
+              <Grid
+                alignItems={"center"}
+                container
+                spacing={4}
+                justifyContent="center"
+              >
+                {roomItems.map((item, index) => (
+                  <Grid item key={index} alignItems="center">
+                    <animated.div style={roomsTrail[index + 1]}>
+                      <Photobooth
+                        src={item.src}
+                        alt={item.alt}
+                        text={item.text}
+                        href={item.href}
+                      />
+                    </animated.div>
+                  </Grid>
+                ))}
+              </Grid>
+            </Box>
+          </div>
+        </Box>
       </Box>
-    </Box>
+    </>
   );
 };
 
