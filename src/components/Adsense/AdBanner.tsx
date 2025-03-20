@@ -23,6 +23,7 @@ const AdBanner = ({
   }, []);
   return (
     <ins
+      key={Math.random()}
       className="adsbygoogle"
       style={{ display: "block" }}
       data-ad-client="ca-pub-6348771383125578"
