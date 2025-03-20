@@ -6,11 +6,11 @@ import { Box, Typography, useMediaQuery, useTheme } from "@mui/material";
 import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 import React from "react";
-import Step1 from "@/assets/qrstep1.png";
-import Step2 from "@/assets/qrstep2.png";
-import Step3 from "@/assets/qrstep3.png";
 import { animationStyles } from "@/components/AnimationStyle";
 
+const Step1 = "http://phototimevn.com/landingpageImage/qrstep1.png";
+const Step2 = "http://phototimevn.com/landingpageImage/qrstep2.png";
+const Step3 = "http://phototimevn.com/landingpageImage/qrstep3.png";
 export default function QRCode() {
   const t = useTranslations("Index");
   const locale = useLocale();
@@ -40,7 +40,7 @@ export default function QRCode() {
           color="secondary"
           marginBottom={5}
           className={classes.shiningText}
-          textAlign={isSmDown ? "center" : "left"}
+          textAlign={"center"}
         >
           {t("usage.content.download")}
         </Typography>
@@ -60,7 +60,7 @@ export default function QRCode() {
             justifyContent={"center"}
             padding={1}
           >
-            <Image
+            <img
               src={Step1}
               alt="step1"
               style={{ width: "100%", height: "auto", maxWidth: 600 }}
@@ -72,7 +72,7 @@ export default function QRCode() {
             justifyContent={"center"}
             padding={1}
           >
-            <Image
+            <img
               src={Step2}
               alt="step2"
               style={{ width: "100%", height: "auto", maxWidth: 600 }}
@@ -84,7 +84,7 @@ export default function QRCode() {
             justifyContent={"center"}
             padding={1}
           >
-            <Image
+            <img
               src={Step3}
               alt="step3"
               style={{ width: "100%", height: "auto", maxWidth: 600 }}

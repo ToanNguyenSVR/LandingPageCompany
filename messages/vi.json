@@ -6,7 +6,8 @@
       "location": "Chi nhánh",
       "frame": "Sản phẩm",
       "app": "Ứng dụng",
-      "franchise": "Nhượng quyền"
+      "franchise": "Nhượng quyền",
+      "introduction": "Giới thiệu"
     },
     "home": {
       "title": {
@@ -35,7 +36,9 @@
       }
     },
     "app": {
-      "title": "ỨNG DỤNG"
+      "title": "ỨNG DỤNG",
+      "android": "Tải App hệ điều hành Android",
+      "ios": "Tải App hệ điều hành IOS"
     },
     "frame": {
       "title": "SẢN PHẨM"
@@ -48,7 +51,19 @@
       "all": "Tất cả",
       "SG": "TP. Hồ Chí Minh",
       "HN": "Hà Nội",
-      "Vinh": "Vinh"
+      "Vinh": "Vinh",
+      "DN": "TP. Đà Nẵng"
+    },
+    "introduction": {
+      "title": "Về chúng tôi",
+      "name": "Công ty TNHH SUNG GA VINA",
+      "interName": "Tên quốc tế",
+      "shortName": "Tên viết tắt",
+      "email": "Email",
+      "tax": "Mã số thuế",
+      "address": "Địa chỉ",
+      "contact": "Điện thoại",
+      "update": "Mã số thuế 0317501823 được cập nhật lần cuối vào ngày 31 tháng 7 năm 2024 lúc 17:37:02."
     },
     "footer": {
       "address": "39 Nguyễn Gia Trí, Phường 25, Quận Bình Thạnh, Thành phố Hồ Chí Minh, Việt Nam"

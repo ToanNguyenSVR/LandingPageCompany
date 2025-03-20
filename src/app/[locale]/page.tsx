@@ -9,14 +9,25 @@ import { Box } from "@mui/material";
 import Footer from "@/components/Footer/Footer";
 import FranchisePage from "@/elements/Franchise/Franchise";
 import FixedButton from "@/components/Button/FixedButton";
+const Banner = "http://phototimevn.com/landingpageImage/mainbanner.png";
 
-export default function Index() {
+export default function Index({
+  params: { locale },
+}: {
+  params: { locale: string };
+}) {
   return (
     <Box>
       <Header />
+      <img
+        alt="banner"
+        src={Banner}
+        style={{ width: "100%", height: "auto" }}
+      />
+      <AppPage />
+
       <HomePage />
       <UsagePage />
-      <AppPage />
       <ProductPage />
       <LocationPage />
       <FranchisePage />

@@ -2,14 +2,14 @@
 
 import { Box, Grid, Typography } from "@mui/material";
 import { useTranslations } from "next-intl";
-import Photobooth from "@/assets/use-photobooth.png";
-import QR from "@/assets/use-qr.png";
-import App from "@/assets/use-app.png";
 import { animationStyles } from "@/components/AnimationStyle";
 import { useInView } from "react-intersection-observer";
 import { useSpring, animated } from "@react-spring/web";
 import { HowToUse, RoundedImageProps } from "@/components/Usage/HowToUse";
-
+import NavigationLink from "@/components/NavigationLink";
+const Photobooth = "http://phototimevn.com/landingpageImage/use-photobooth.png";
+const QR = "http://phototimevn.com/landingpageImage/use-qr.png";
+const App = "http://phototimevn.com/landingpageImage/use-app.png";
 const UsagePage = () => {
   const t = useTranslations("Index");
   const { classes } = animationStyles();

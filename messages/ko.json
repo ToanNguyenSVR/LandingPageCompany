@@ -6,7 +6,8 @@
       "location": "매장",
       "frame": "프레임",
       "app": "앱",
-      "franchise": "프랜차이즈"
+      "franchise": "프랜차이즈",
+      "introduction": "회사 소개"
     },
     "home": {
       "title": {
@@ -35,7 +36,9 @@
       }
     },
     "app": {
-      "title": "앱"
+      "title": "앱",
+      "android": "Android 운영 체제 앱 다운로드",
+      "ios": "iOS 운영 체제용 앱 다운로드"
     },
     "frame": {
       "title": "프레임"
@@ -48,7 +51,19 @@
       "all": "모두",
       "SG": "호치민",
       "HN": "하노이",
-      "Vinh": "VINH"
+      "Vinh": "VINH",
+      "DN": "다낭"
+    },
+    "introduction": {
+      "title": "회사 소개",
+      "name": "Sung Ga Vina 유한책임회사",
+      "interName":"국제 이름",
+      "shortName": "약어",
+      "email": "이메일",
+      "tax": "세금 번호",
+      "address": "주소",
+      "contact": "전화번호",
+      "update": "세금 번호 0317501823는 2024년 7월 31일 17시 37분 02초에 마지막으로 업데이트되었습니다."
     },
     "footer": {
       "address": "호치민시, 빈탄군, 응웬지아찌 거리, 39번지"

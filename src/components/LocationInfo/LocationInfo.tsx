@@ -1,4 +1,5 @@
 import { Box, Button, Tooltip, Typography } from "@mui/material";
+import Image from "next/image";
 import React from "react";
 import PlaceOutlinedIcon from "@mui/icons-material/PlaceOutlined";
 import Link from "next/link";
@@ -28,7 +29,10 @@ export const LocationInfo = ({
       flexDirection={"column"}
       alignItems={"center"}
       height={"100%"}
-      width={"100%"}
+      width={{
+        xs: "90%",
+        sm: "100%",
+      }}
       sx={{
         backgroundColor: "#FFF1F9",
         borderRadius: 5,
@@ -79,7 +83,16 @@ export const LocationInfo = ({
             fontWeight={600}
             color="secondary"
             flexWrap={"nowrap"}
-            sx={{ fontSize: "1.3rem", lineHeight: 1 }}
+            sx={{
+              fontSize: {
+                xs: "1rem",
+                sm: "1rem",
+                md: "1.1rem",
+                lg: "1.5rem",
+              },
+              lineHeight: 1,
+              mb: { xs: 2, sm: 1, md: 1, lg: 2 },
+            }}
           >
             {name}
           </Typography>
@@ -106,6 +119,7 @@ export const LocationInfo = ({
               sx={{
                 padding: "4px 16px 0.5rem 16px",
                 fontSize: "0.9rem",
+                display: { xs: "none", sm: "none", md: "none", lg: "block" },
               }}
             >
               {handleRenderText(distance)}

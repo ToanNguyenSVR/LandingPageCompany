@@ -3,20 +3,19 @@
 import { HowToUse } from "@/components/Usage/HowToUse";
 import { Box, Typography } from "@mui/material";
 import { useTranslations } from "next-intl";
-import BannerFrame from "@/assets/banner-frame.png";
 import Image, { StaticImageData } from "next/image";
-import Frame1 from "@/assets/frame1.jpg";
-import Frame2 from "@/assets/frame2.jpg";
-import Frame3 from "@/assets/frame3.jpg";
-import Frame4 from "@/assets/frame4.jpg";
-import Frame5 from "@/assets/frame5.jpg";
-import Frame6 from "@/assets/frame6.jpg";
 import { animationStyles } from "@/components/AnimationStyle";
 import { useInView } from "react-intersection-observer";
 import { useSpring, animated } from "@react-spring/web";
-
+const BannerFrame = "http://phototimevn.com/landingpageImage/banner-frame.png";
+const Frame1 = "http://phototimevn.com/landingpageImage/frame1.jpg";
+const Frame2 = "http://phototimevn.com/landingpageImage/frame2.jpg";
+const Frame3 = "http://phototimevn.com/landingpageImage/frame3.jpg";
+const Frame4 = "http://phototimevn.com/landingpageImage/frame4.jpg";
+const Frame5 = "http://phototimevn.com/landingpageImage/frame5.jpg";
+const Frame6 = "http://phototimevn.com/landingpageImage/frame6.jpg";
 interface FrameProps {
-  src: StaticImageData;
+  src: string;
   color: string;
 }
 
@@ -84,11 +83,10 @@ const ProductPage = () => {
               justifyContent={"center"}
             >
               <Box position={"relative"} width={"100%"} height={"100%"}>
-                <Image
+                <img
+                  style={{ width: "100%", height: "100%" }}
                   src={frame.src}
                   alt={`frame${index + 1}`}
-                  layout="fill"
-                  objectFit="contain"
                 />
               </Box>
             </Box>
@@ -96,12 +94,7 @@ const ProductPage = () => {
         </Box>
       </animated.div>
 
-      <Image
-        src={BannerFrame}
-        alt="BannerFrame"
-        layout="intrinsic"
-        objectFit="cover"
-      />
+      <img style={{ width: "100%" }} src={BannerFrame} alt="BannerFrame" />
     </Box>
   );
 };

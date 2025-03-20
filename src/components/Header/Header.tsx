@@ -19,15 +19,13 @@ import {
 import { useLocale, useTranslations } from "next-intl";
 import Image, { StaticImageData } from "next/image";
 import React, { useState, useEffect } from "react";
-import Logo from "@/assets/logo.png";
-import VI from "@/assets/vi-icon.png";
-import EN from "@/assets/en-icon.png";
-import KO from "@/assets/ko-icon.png";
-import HeaderStyle from "./HeaderStyle";
 import { HeaderItem } from "@/utils/Data/HeaderItem";
 import { NextLocalNavigation, locales } from "@/middleware";
 import MenuIcon from "@mui/icons-material/Menu";
 import NavigationLink from "../NavigationLink";
+import HeaderStyle from "./HeaderStyle";
+
+const Logo = "http://phototimevn.com/landingpageImage/logo.png";
 
 enum Language {
   VI = "vi",
@@ -35,10 +33,10 @@ enum Language {
   KO = "ko",
 }
 
-const settingIcon: Record<Language, StaticImageData> = {
-  [Language.EN]: EN,
-  [Language.VI]: VI,
-  [Language.KO]: KO,
+const settingIcon: Record<Language, string> = {
+  [Language.EN]: "http://phototimevn.com/landingpageImage/en-icon.png",
+  [Language.VI]: "http://phototimevn.com/landingpageImage/vi-icon.png",
+  [Language.KO]: "http://phototimevn.com/landingpageImage/ko-icon.png",
 };
 
 export default function Header() {
@@ -138,7 +136,7 @@ export default function Header() {
           justifyItems={"center"}
           marginLeft={"5vw"}
         >
-          <Image src={Logo} alt="Logo" />
+          <img src={Logo} alt="Logo" />
         </Box>
       </NavigationLink>
       {isSmallScreen ? (
@@ -162,15 +160,32 @@ export default function Header() {
               onClick={() => handleScroll(item.label)}
               className={classes.button}
             >
-              <Typography variant="body1" color="secondary" fontWeight={600}>
+              <Typography
+                variant="body1"
+                fontSize={{ xs: "0.8rem", md: "0.8rem", lg: "1rem" }}
+                color="secondary"
+                fontWeight={600}
+              >
                 {lanTrans(`header.${item.label}`)}
               </Typography>
             </Button>
           ))}
+          <NavigationLink href={"/introduction"}>
+            <Button color="inherit" className={classes.button}>
+              <Typography
+                variant="body1"
+                fontSize={{ xs: "0.8rem", md: "0.8rem", lg: "1rem" }}
+                color="secondary"
+                fontWeight={600}
+              >
+                {lanTrans(`header.introduction`)}
+              </Typography>
+            </Button>
+          </NavigationLink>
           <ClickAwayListener onClickAway={handleClickAway}>
             <Box>
               <Button onClick={handleClick}>
-                <Image
+                <img
                   src={settingIcon[locale as Language]}
                   alt={locale}
                   width={24}
@@ -198,7 +213,7 @@ export default function Header() {
                       key={item}
                       onClick={() => handleLanguageChange(item)}
                     >
-                      <Image
+                      <img
                         src={settingIcon[item as Language]}
                         alt={item}
                         width={24}
@@ -248,14 +263,27 @@ export default function Header() {
                 />
               </ListItem>
             ))}
+            <NavigationLink href="/introduction">
+              <ListItem button>
+                <ListItemText
+                  primary={lanTrans(`header.introduction`)}
+                  primaryTypographyProps={{
+                    variant: "body1",
+                    color: "secondary",
+                    fontWeight: 600,
+                  }}
+                />
+              </ListItem>
+            </NavigationLink>
             <Divider />
+
             {locales.map((item) => (
               <ListItem
                 button
                 key={item}
                 onClick={() => handleLanguageChange(item)}
               >
-                <Image
+                <img
                   src={settingIcon[item as Language]}
                   alt={item}
                   width={24}

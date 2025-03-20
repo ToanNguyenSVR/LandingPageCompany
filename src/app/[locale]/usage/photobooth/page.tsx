@@ -6,8 +6,9 @@ import { Box, Typography, useMediaQuery, useTheme } from "@mui/material";
 import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 import React from "react";
-import Photobooth from "@/assets/use-photobooth.png";
 import { animationStyles } from "@/components/AnimationStyle";
+
+const Photobooth = "http://phototimevn.com/landingpageImage/use-photobooth.png";
 
 export default function PhotoboothDirectionPage() {
   const t = useTranslations("Index");
@@ -36,7 +37,7 @@ export default function PhotoboothDirectionPage() {
           fontWeight={700}
           color="secondary"
           className={classes.shiningText}
-          textAlign={isSmDown ? "center" : "left"}
+          textAlign={"center"}
         >
           {t("usage.content.booth")}
         </Typography>
@@ -48,16 +49,23 @@ export default function PhotoboothDirectionPage() {
           gap={5}
           justifyContent={"center"}
         >
-          <Image
+          <img
+            style={{ width: "100%", height: "auto", maxHeight: 700 }}
             height={700}
-            layout="intrinsic"
-            quality={100}
             src={Photobooth}
             alt="map"
           />
 
-          <video height={700} controls>
-            <source src="/videos/photobooth.mp4" type="video/mp4" />
+          <video
+            autoPlay
+            style={{ width: "100%", height: "auto", maxHeight: 700 }}
+            height={700}
+            controls
+          >
+            <source
+              src={"http://phototimevn.com/landingpageImage/photobooth.mp4"}
+              type="video/webm"
+            />
             Your browser does not support the video tag.
           </video>
         </Box>

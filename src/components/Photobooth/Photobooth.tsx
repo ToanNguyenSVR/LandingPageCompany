@@ -5,6 +5,7 @@ import { RoundedImageProps } from "../Usage/HowToUse";
 import UsageStyle from "../Usage/UsageStyle";
 import { useLocale } from "next-intl";
 import Link from "next/link";
+import NavigationLink from "../NavigationLink";
 
 export const Photobooth: React.FC<RoundedImageProps> = ({
   src,
@@ -21,7 +22,7 @@ export const Photobooth: React.FC<RoundedImageProps> = ({
   return (
     <Grid item xs={12}>
       <Box display={"flex"} flexDirection={"column"} alignItems={"center"}>
-        <Link href={locale + href}>
+        <NavigationLink href={href}>
           <Box
             height={isSmallScreen ? "30vh" : "50vh"}
             width={isSmallScreen ? "25vh" : "35vh"}
@@ -29,15 +30,19 @@ export const Photobooth: React.FC<RoundedImageProps> = ({
             overflow={"hidden"}
             position={"relative"}
           >
-            <Image
+            <img
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                objectPosition: "center",
+              }}
               className={classes.button}
               src={src}
               alt={alt}
-              layout="fill"
-              objectFit="cover"
             />
           </Box>
-        </Link>
+        </NavigationLink>
         <Typography
           textTransform={"uppercase"}
           mt={5}

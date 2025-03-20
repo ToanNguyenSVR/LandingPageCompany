@@ -2,24 +2,23 @@
 
 import { Box, Grid, Typography } from "@mui/material";
 import { useTranslations } from "next-intl";
-import Slogan from "@/assets/slogan.png";
-import Banner from "@/assets/mainbanner.png";
-import BasicBooth from "@/assets/basicroom.jpg";
-import BanbeBooth from "@/assets/banberoom.jpg";
-import HighAngle from "@/assets/highangle.jpg";
-import CloudBg from "@/assets/bg-cloud.png";
-import Image from "next/image";
 import { Photobooth } from "@/components/Photobooth/Photobooth";
 import { RoundedImageProps } from "@/components/Usage/HowToUse";
 import { animationStyles } from "@/components/AnimationStyle";
 import { useState, useEffect, useRef } from "react";
-import { useSpring, useTrail, animated } from "@react-spring/web";
+import { useTrail, animated } from "@react-spring/web";
 import { useInView } from "react-intersection-observer";
-import About1 from "@/assets/intro1.jpg";
-import About2 from "@/assets/intro2.jpg";
-import About3 from "@/assets/intro3.jpg";
-import About4 from "@/assets/intro4.jpg";
 import AdBanner from "@/components/Adsense/AdBanner";
+
+const About1 = "http://phototimevn.com/landingpageImage/intro1.jpg";
+const About2 = "http://phototimevn.com/landingpageImage/intro2.jpg";
+const About3 = "http://phototimevn.com/landingpageImage/intro3.jpg";
+const About4 = "http://phototimevn.com/landingpageImage/intro4.jpg";
+const Slogan = "http://phototimevn.com/landingpageImage/slogan.png";
+const BasicBooth = "http://phototimevn.com/landingpageImage/basicroom.jpg";
+const BanbeBooth = "http://phototimevn.com/landingpageImage/banberoom.jpg";
+const HighAngle = "http://phototimevn.com/landingpageImage/highangle.jpg";
+const CloudBg = "http://phototimevn.com/landingpageImage/bg-cloud.png";
 
 const HomePage = () => {
   const t = useTranslations("Index");
@@ -66,11 +65,11 @@ const HomePage = () => {
     }
   }, [currentIndex]);
 
-  const [contentRef, contentInView, contentEntry] = useInView({
+  const [contentRef, contentInView] = useInView({
     triggerOnce: false,
     threshold: 0.5,
   });
-  const [roomsRef, roomsInView, roomsEntry] = useInView({
+  const [roomsRef, roomsInView] = useInView({
     triggerOnce: false,
     threshold: 0.5,
   });
@@ -95,7 +94,7 @@ const HomePage = () => {
         dataAdFormat="auto"
         dataFullWidthResponsive={true}
         dataAdSlot="4284247248"
-      />
+      ></AdBanner>
       <Box
         height={"100%"}
         id="home"
@@ -104,17 +103,20 @@ const HomePage = () => {
         display={"flex"}
         flexDirection={"column"}
       >
-        <Image alt="banner" src={Banner} layout="intrinsic" />
-
         <Box
           position={"relative"}
           display={"flex"}
           justifyContent={"center"}
           alignItems={"center"}
-          my={5}
-          sx={{ width: "33%" }}
+          mb={5}
+          mt={10}
+          sx={{ width: { xs: "80%", md: "33%" } }}
         >
-          <Image alt="slogan" src={Slogan} layout="responsive" />
+          <img
+            alt="slogan"
+            src={Slogan}
+            style={{ width: "100%", height: "auto" }}
+          />
         </Box>
         <animated.div ref={contentRef}>
           <Box
@@ -141,7 +143,11 @@ const HomePage = () => {
                   width="100%"
                   sx={{ scrollSnapAlign: "center" }}
                 >
-                  <Image alt="about" src={img} layout="responsive" />
+                  <img
+                    alt="about"
+                    src={img}
+                    style={{ width: "100%", height: "auto" }}
+                  />
                 </Box>
               ))}
             </Box>
@@ -191,7 +197,16 @@ const HomePage = () => {
           position="relative"
           py="15vh"
         >
-          <Image alt="cloud" src={CloudBg} layout="fill" objectFit="fill" />
+          <img
+            alt="cloud"
+            src={CloudBg}
+            style={{
+              position: "absolute",
+              width: "100%",
+              height: "100%",
+              objectFit: "fill",
+            }}
+          />
           <div ref={roomsRef}>
             <Box
               position={"relative"}

@@ -6,8 +6,9 @@ import { Box, Typography, useMediaQuery, useTheme } from "@mui/material";
 import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 import React from "react";
-import App from "@/assets/use-app.png";
 import { animationStyles } from "@/components/AnimationStyle";
+
+const App = "http://phototimevn.com/landingpageImage/use-app.png";
 
 export default function AppPage() {
   const t = useTranslations("Index");
@@ -37,7 +38,7 @@ export default function AppPage() {
           color="secondary"
           marginBottom={5}
           className={classes.shiningText}
-          textAlign={isSmDown ? "center" : "left"}
+          textAlign={"center"}
         >
           {t("usage.content.app")}
         </Typography>
@@ -49,15 +50,21 @@ export default function AppPage() {
           gap={5}
           justifyContent={"center"}
         >
-          <Image
-            height={700}
-            layout="intrinsic"
-            quality={100}
+          <img
+            style={{ width: "100%", height: "auto", maxHeight: 700 }}
             src={App}
             alt="map"
           />
-          <video autoPlay height={700} controls>
-            <source src="/videos/app.mp4" type="video/mp4" />
+        <video
+            autoPlay
+            style={{ width: "100%", height: "auto", maxHeight: 700 }}
+            height={700}
+            controls
+          >
+            <source
+              src={"http://phototimevn.com/landingpageImage/app.mp4"}
+              type="video/webm"
+            />
           </video>
         </Box>
       </Box>

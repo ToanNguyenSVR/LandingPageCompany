@@ -6,7 +6,8 @@
       "location": "Location",
       "frame": "Product",
       "app": "Download",
-      "franchise": "Franchise"
+      "franchise": "Franchise",
+      "introduction": "About us"
     },
     "home": {
       "title": {
@@ -35,7 +36,9 @@
       }
     },
     "app": {
-      "title": "APPLICATION"
+      "title": "APPLICATION",
+      "android": "Download App for Android",
+      "ios": "Download App for IOS"
     },
     "frame": {
       "title": "PRODUCT"
@@ -48,7 +51,19 @@
       "all": "All locations",
       "SG": "Ho Chi Minh City",
       "HN": "Ha Noi",
-      "Vinh": "Vinh City"
+      "Vinh": "Vinh City",
+      "DN": "Da Nang City"
+    },
+    "introduction": {
+      "title": "About us",
+      "name": "Sung Ga Vina Company Limited",
+      "interName":"Internation name",
+      "shortName": "Abbreviated name",
+      "email": "Email",
+      "tax": "Tax code",
+      "address": "Address",
+      "contact": "Phone number",
+      "update": "Tax ID 0317501823 was last updated on July 31, 2024 at 17:37:02."
     },
     "footer": {
       "address": "39 Nguyen Gia Tri, 25 Ward, Binh Thanh District, Ho Chi Minh City, Vietnam"

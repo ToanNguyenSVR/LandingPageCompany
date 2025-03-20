@@ -3,14 +3,6 @@
 import CustomSlider from "@/components/LocationInfo/CustomSlider";
 import { Box, Button, Typography } from "@mui/material";
 import { useTranslations } from "next-intl";
-import Image from "next/image";
-import Spirit from "@/assets/spirit.png";
-import PostFB from "@/assets/postFB.png";
-import PostTT from "@/assets/postTT.png";
-import PostIG from "@/assets/postIG.png";
-import Tiktok from "@/assets/tiktok.png";
-import Ins from "@/assets/instagram.png";
-import Facebook from "@/assets/facebook.png";
 import { animationStyles } from "@/components/AnimationStyle";
 import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
@@ -18,6 +10,14 @@ import Link from "next/link";
 import NavigationLink from "@/components/NavigationLink";
 import { useInView } from "react-intersection-observer";
 import { useSpring, animated } from "@react-spring/web";
+
+const Spirit = "http://phototimevn.com/landingpageImage/spirit.png";
+const PostFB = "http://phototimevn.com/landingpageImage/postFB.png";
+const PostTT = "http://phototimevn.com/landingpageImage/postTT.png";
+const PostIG = "http://phototimevn.com/landingpageImage/postIG.png";
+const Tiktok = "http://phototimevn.com/landingpageImage/tiktok.png";
+const Ins = "http://phototimevn.com/landingpageImage/instagram.png";
+const Facebook = "http://phototimevn.com/landingpageImage/facebook.png";
 
 const variants = {
   animate: {
@@ -105,7 +105,7 @@ const LocationPage = () => {
         <Button
           sx={{
             borderRadius: 5,
-            paddingX: 5,
+            paddingX: 3,
             boxShadow: "none",
             marginY: 2,
             fontSize: { xs: "0.75rem", md: "1rem" },
@@ -114,12 +114,18 @@ const LocationPage = () => {
           color="secondary"
           onClick={handleMoreButtonClick}
         >
-          <Typography color="white">{t("moreButton")}</Typography>
+          <Typography
+            fontSize={{ xs: "0.75rem", md: "1rem" }}
+            textTransform={"none"}
+            color="white"
+          >
+            {t("moreButton")}
+          </Typography>
         </Button>
       </NavigationLink>
       <Box marginY={"10vh"} width={"15vw"}>
         <motion.div variants={bearDanceVariants} animate="dance">
-          <Image src={Spirit} alt="spirit" layout="responsive" />
+          <img style={{ width: "100%" }} src={Spirit} alt="spirit" />
         </motion.div>
       </Box>
       <Box width="100%" overflow={"hidden"}>
@@ -137,7 +143,7 @@ const LocationPage = () => {
             fontWeight={700}
             color="secondary"
             marginBottom={5}
-            sx={{ fontSize: { xs: "2rem", md: "2.5rem", lg: "3rem" } }}
+            sx={{ fontSize: { xs: "1.1rem", md: "2.5rem", lg: "3rem" } }}
           >
             {t("followUs")}
           </Typography>
@@ -158,14 +164,9 @@ const LocationPage = () => {
             gap={3}
             alignItems={"center"}
           >
-            <Image
-              layout="responsive"
-              quality={100}
-              src={PostFB}
-              alt="fb"
-            ></Image>
+            <img style={{ width: "100%" }} src={PostFB} alt="fb"></img>
             <Link href="https://www.facebook.com/phototimevn">
-              <Image width={50} src={Facebook} alt="facebook"></Image>
+              <img src={Facebook} alt="facebook"></img>
             </Link>
           </Box>
           <Box
@@ -174,14 +175,9 @@ const LocationPage = () => {
             gap={3}
             alignItems={"center"}
           >
-            <Image
-              layout="responsive"
-              quality={100}
-              src={PostIG}
-              alt="ig"
-            ></Image>
+            <img style={{ width: "100%" }} src={PostIG} alt="ig"></img>
             <Link href="https://www.instagram.com/phototimeofficial">
-              <Image width={50} src={Ins} alt="ins"></Image>
+              <img src={Ins} alt="ins"></img>
             </Link>
           </Box>
           <Box
@@ -190,14 +186,9 @@ const LocationPage = () => {
             gap={3}
             alignItems={"center"}
           >
-            <Image
-              layout="responsive"
-              quality={100}
-              src={PostTT}
-              alt="tt"
-            ></Image>
+            <img style={{ width: "100%" }} src={PostTT} alt="tt"></img>
             <Link href="https://www.tiktok.com/@phototimevietnam">
-              <Image width={50} src={Tiktok} alt="tik"></Image>
+              <img src={Tiktok} alt="tik"></img>
             </Link>
           </Box>
         </Box>

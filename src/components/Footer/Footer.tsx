@@ -1,15 +1,15 @@
 import { Box, Typography, useMediaQuery, useTheme } from "@mui/material";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
-import OriginalLogo from "@/assets/ori-logo.png";
-import Tiktok from "@/assets/tiktok.png";
-import Ins from "@/assets/instagram.png";
-import Facebook from "@/assets/facebook.png";
 import CallOutlinedIcon from "@mui/icons-material/CallOutlined";
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import PlaceOutlinedIcon from "@mui/icons-material/PlaceOutlined";
 import Link from "next/link";
 
+const OriginalLogo = "http://phototimevn.com/landingpageImage/ori-logo.png";
+const Tiktok = "http://phototimevn.com/landingpageImage/tiktok.png";
+const Ins = "http://phototimevn.com/landingpageImage/instagram.png";
+const Facebook = "http://phototimevn.com/landingpageImage/facebook.png";
 export default function Footer() {
   const t = useTranslations("Index");
   const theme = useTheme();
@@ -58,7 +58,14 @@ export default function Footer() {
         width={isMdScreen ? "100%" : "33%"}
         marginY={isMdScreen ? 3 : 0}
       >
-        <Image src={OriginalLogo} alt="original" layout="intrinsic"></Image>
+        <img
+          style={{
+            width: "100%",
+            height: "auto",
+          }}
+          src={OriginalLogo}
+          alt="original"
+        ></img>
       </Box>
       <Box
         justifyContent={isMdScreen ? "center" : "flex-end"}
@@ -68,13 +75,13 @@ export default function Footer() {
         width={isMdScreen ? "100%" : "33%"}
       >
         <Link href="https://www.tiktok.com/@phototimevietnam">
-          <Image src={Tiktok} alt="tiktok" width={50} height={50} />
+          <img src={Tiktok} alt="tiktok" width={50} height={50} />
         </Link>
         <Link href="https://www.instagram.com/phototimeofficial">
-          <Image src={Ins} alt="ins" width={50} height={50} />
+          <img src={Ins} alt="ins" width={50} height={50} />
         </Link>
         <Link href="https://www.facebook.com/phototimevn">
-          <Image src={Facebook} alt="fb" width={50} height={50} />
+          <img src={Facebook} alt="fb" width={50} height={50} />
         </Link>
       </Box>
     </Box>

@@ -15,17 +15,18 @@ export default createMiddleware({
 
 export const config = {
   // Match only internationalized pathnames
-  matcher: ["/", "/(vi|en|ko)/:path*"],
+  matcher: ["/"],
 };
 
 export const pathnames = {
   "/": "/",
   "/locations": "/locations",
+  "/introduction": "/introduction",
   "/usage/photobooth": "/usage/photobooth",
   "/usage/qr-code": "/usage/qr-code",
-  "room/basic": "/room/basic",
-  "room/banbe": "/room/banbe",
-  "room/high-angle": "/room/high-angle",
+  "/room/basic": "/room/basic",
+  "/room/banbe": "/room/banbe",
+  "/room/high-angle": "/room/high-angle",
 } satisfies Pathnames<typeof locales>;
 
 export const localePrefix = "always";

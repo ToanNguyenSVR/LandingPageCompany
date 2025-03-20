@@ -4,12 +4,11 @@ import Footer from "@/components/Footer/Footer";
 import Header from "@/components/Header/Header";
 import { Box, Grid, Typography, useMediaQuery, useTheme } from "@mui/material";
 import { useTranslations } from "next-intl";
-import Image from "next/image";
 import React from "react";
-import BanbeBG from "@/assets/bgbanbe.png";
-import BanbeIMG from "@/assets/imagebanbe.png";
-import { animationStyles } from "@/components/AnimationStyle";
 
+import { animationStyles } from "@/components/AnimationStyle";
+const BanbeBG = "http://phototimevn.com/landingpageImage/bgbanbe.png";
+const BanbeIMG = "http://phototimevn.com/landingpageImage/imagebanbe.png";
 export default function BanbeRoom() {
   const t = useTranslations("Index");
   const theme = useTheme();
@@ -29,7 +28,7 @@ export default function BanbeRoom() {
         alignItems={"center"}
         justifyContent={"center"}
       >
-         <Typography
+        <Typography
           textTransform={"uppercase"}
           variant="h2"
           fontWeight={700}
@@ -42,25 +41,21 @@ export default function BanbeRoom() {
         </Typography>
 
         <Grid container spacing={5} justifyContent="center" alignItems="center">
-          <Grid item xs={12} md={6}>
-            <Box position="relative" width="100%" height="70vh">
-              <Image
+          <Grid item xs={12} md={6} display="flex" justifyContent="center">
+            <Box position="relative" width="100%">
+              <img
                 src={BanbeBG}
                 alt="bbbg"
-                layout="fill"
-                objectFit="contain"
-                quality={100}
+                style={{ width: "100%", height: "70vh" }}
               />
             </Box>
           </Grid>
-          <Grid item xs={12} md={6}>
-            <Box position="relative" width="100%" height="70vh">
-              <Image
+          <Grid item xs={12} md={6} display="flex" justifyContent="center">
+            <Box position="relative" width="100%">
+              <img
                 src={BanbeIMG}
                 alt="bbimg"
-                layout="fill"
-                objectFit="contain"
-                quality={100}
+                style={{ width: "100%", height: "70vh" }}
               />
             </Box>
           </Grid>

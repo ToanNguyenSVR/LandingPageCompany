@@ -5,13 +5,13 @@ import { animationStyles } from "@/components/AnimationStyle";
 import { useInView } from "react-intersection-observer";
 import { useSpring, animated } from "@react-spring/web";
 import FranchiseForm from "@/components/Franchise/FranchiseForm";
-import Image from "next/image";
-import Logo from "@/assets/phototime-logo.png";
 import CallOutlinedIcon from "@mui/icons-material/CallOutlined";
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import { StyledBoxContent } from "@/components/Franchise/FranchiseStyle";
 import { useEffect, useRef, useState } from "react";
 import ReferenceForm from "@/components/ReferenceForm/ReferenceForm";
+
+const Logo = "http://phototimevn.com/landingpageImage/phototime-logo.png";
 
 const FranchisePage = () => {
   const t = useTranslations("Index");
@@ -23,7 +23,7 @@ const FranchisePage = () => {
   });
 
   const [rightRef, rightInView] = useInView({
-    triggerOnce: false,
+    triggerOnce: true,
     threshold: 0.5,
   });
 
@@ -122,26 +122,33 @@ const FranchisePage = () => {
                   justifyContent={"center"}
                 >
                   <Box width="100%" maxWidth={700}>
-                    <Image src={Logo} alt="Logo" layout="responsive" />
+                    <img style={{ width: "100%" }} src={Logo} alt="Logo" />
                   </Box>
                   <Box
                     display={"flex"}
-                    gap={2}
                     alignItems={"center"}
-                    flexWrap="wrap"
+                    justifyContent={{
+                      xs: "center",
+                      sm: "flex-start",
+                    }}
+                    width="100%"
                   >
-                    <EmailOutlinedIcon color="info" />
                     <Typography
+                      alignItems={"center"}
+                      justifyContent={"center"}
+                      display={"flex"}
                       variant="body1"
+                      gap={2}
                       fontSize={{ xs: "1rem", md: "1.25rem" }}
                     >
-                      phototime1974@gmail.com
+                      <EmailOutlinedIcon color="info" /> phototime1974@gmail.com
                     </Typography>
                   </Box>
                   <Box
                     display={"flex"}
                     gap={2}
                     alignItems={"center"}
+                    justifyContent={"center"}
                     flexWrap="wrap"
                   >
                     <CallOutlinedIcon color="info" />

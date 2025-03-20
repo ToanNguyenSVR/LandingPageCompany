@@ -98,7 +98,6 @@ const FranchiseForm: React.FC = () => {
     if (watchProvince) {
       fetchDistricts(watchProvince);
     }
-    console.log(watchProvince);
   }, [watchProvince]);
 
   const fetchDistricts = async (provinceId: string) => {
@@ -118,7 +117,6 @@ const FranchiseForm: React.FC = () => {
     if (watchDistrict) {
       fetchWards(watchDistrict);
     }
-    console.log(watchDistrict);
   }, [watchDistrict]);
 
   const fetchWards = async (districtId: string) => {
@@ -195,7 +193,7 @@ const FranchiseForm: React.FC = () => {
     }
   };
   return (
-    <Grid item xs={12} paddingX={{ xs: 2, md: 8 }}>
+    <Grid item xs={12} paddingX={{ xs: 5, md: 8 }}>
       <Box component="form" onSubmit={handleSubmit(onSubmit)}>
         <Grid paddingTop={10} container spacing={2} width={"100%"}>
           <Grid item xs={12} sm={6}>

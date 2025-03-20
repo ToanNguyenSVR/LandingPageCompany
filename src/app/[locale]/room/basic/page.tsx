@@ -6,15 +6,15 @@ import { Box, Typography, useMediaQuery, useTheme } from "@mui/material";
 import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 import React from "react";
-import BasicBG from "@/assets/bgbasic.png";
-import InsidePink from "@/assets/inside-pink.png";
-import InsideGray from "@/assets/inside-gray.png";
-import InsideBlue from "@/assets/inside-blue.png";
-import Pink from "@/assets/pink.png";
-import Gray from "@/assets/gray.png";
-import Blue from "@/assets/blue.png";
-import Navy from "@/assets/navy.png";
 import { animationStyles } from "@/components/AnimationStyle";
+const BasicBG = "http://phototimevn.com/landingpageImage/bgbasic.png";
+const InsidePink = "http://phototimevn.com/landingpageImage/inside-pink.png";
+const InsideGray = "http://phototimevn.com/landingpageImage/inside-gray.png";
+const InsideBlue = "http://phototimevn.com/landingpageImage/inside-blue.png";
+const Pink = "http://phototimevn.com/landingpageImage/pink.png";
+const Gray = "http://phototimevn.com/landingpageImage/gray.png";
+const Blue = "http://phototimevn.com/landingpageImage/blue.png";
+const Navy = "http://phototimevn.com/landingpageImage/navy.png";
 export default function BasicRoom() {
   const t = useTranslations("Index");
   const theme = useTheme();
@@ -38,7 +38,7 @@ export default function BasicRoom() {
         alignItems={"center"}
         justifyContent={"center"}
       >
-        <Image layout="intrinsic" quality={100} src={BasicBG} alt="bg" />
+        <img src={BasicBG} alt="bg" />
         <Typography
           textTransform={"uppercase"}
           variant="h2"
@@ -58,14 +58,17 @@ export default function BasicRoom() {
             gap={2}
             alignItems={"center"}
           >
-            <Image
-              height={500}
-              layout="intrinsic"
-              quality={100}
+            <img
+              style={{ maxHeight: 500, width: "100%", height: "100%" }}
               src={InsidePink}
               alt="ipink"
             />
-            <Typography variant="body1" color={"info.main"} fontWeight={600}>
+            <Typography
+              variant="body1"
+              color={"info.main"}
+              fontWeight={600}
+              fontSize={"1rem"}
+            >
               {t("home.color.pink")}
             </Typography>
           </Box>
@@ -75,14 +78,17 @@ export default function BasicRoom() {
             gap={2}
             alignItems={"center"}
           >
-            <Image
-              height={500}
-              layout="intrinsic"
-              quality={100}
+            <img
+              style={{ maxHeight: 500, width: "100%", height: "100%" }}
               src={InsideGray}
               alt="igray"
             />
-            <Typography variant="body1" color={"info.main"} fontWeight={600}>
+            <Typography
+              variant="body1"
+              color={"info.main"}
+              fontWeight={600}
+              fontSize={"1rem"}
+            >
               {t("home.color.gray")}
             </Typography>
           </Box>
@@ -92,46 +98,25 @@ export default function BasicRoom() {
             gap={2}
             alignItems={"center"}
           >
-            <Image
-              height={500}
-              layout="intrinsic"
-              quality={100}
+            <img
+              style={{ maxHeight: 500, width: "100%", height: "100%" }}
               src={InsideBlue}
               alt="iblue"
             />
-            <Typography variant="body1" color={"info.main"} fontWeight={600}>
+            <Typography
+              variant="body1"
+              color={"info.main"}
+              fontSize={"1rem"}
+              fontWeight={600}
+            >
               {t("home.color.gray")}
             </Typography>
           </Box>
         </Box>
-        <Image
-          height={1000}
-          layout="intrinsic"
-          quality={100}
-          src={Pink}
-          alt="pink"
-        />
-        <Image
-          height={1000}
-          layout="intrinsic"
-          quality={100}
-          src={Gray}
-          alt="gray"
-        />
-        <Image
-          height={1000}
-          layout="intrinsic"
-          quality={100}
-          src={Blue}
-          alt="blue"
-        />
-        <Image
-          height={1000}
-          layout="intrinsic"
-          quality={100}
-          src={Navy}
-          alt="navy"
-        />
+        <img height={1000} src={Pink} alt="pink" />
+        <img height={1000} src={Gray} alt="gray" />
+        <img height={1000} src={Blue} alt="blue" />
+        <img height={1000} src={Navy} alt="navy" />
       </Box>
       <Footer />
     </Box>
