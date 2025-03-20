@@ -1,5 +1,4 @@
 import { Box, Button, Tooltip, Typography } from "@mui/material";
-import Image from "next/image";
 import React from "react";
 import PlaceOutlinedIcon from "@mui/icons-material/PlaceOutlined";
 import Link from "next/link";

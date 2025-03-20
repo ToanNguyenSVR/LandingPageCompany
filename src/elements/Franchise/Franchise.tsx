@@ -10,6 +10,8 @@ import Logo from "@/assets/phototime-logo.png";
 import CallOutlinedIcon from "@mui/icons-material/CallOutlined";
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import { StyledBoxContent } from "@/components/Franchise/FranchiseStyle";
+import { useEffect, useRef, useState } from "react";
+import ReferenceForm from "@/components/ReferenceForm/ReferenceForm";
 
 const FranchisePage = () => {
   const t = useTranslations("Index");
@@ -37,6 +39,37 @@ const FranchisePage = () => {
     config: { duration: 500 },
   });
 
+  const refForm = useRef<any>(null);
+  const [isButtonVisible, setIsButtonVisible] = useState(true);
+
+  const handleScrollToForm = () => {
+    if (refForm.current) {
+      refForm.current.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
+  const handleScroll = () => {
+    if (refForm.current) {
+      const formTop = refForm.current.getBoundingClientRect().top;
+      const windowHeight = window.innerHeight;
+
+      const offset = 400;
+
+      if (formTop <= windowHeight + offset && formTop >= -offset) {
+        setIsButtonVisible(false);
+      } else {
+        setIsButtonVisible(true);
+      }
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <Box
       height={"100%"}
@@ -47,7 +80,11 @@ const FranchisePage = () => {
       paddingBottom={20}
       paddingTop={12}
       overflow={"hidden"}
+      ref={refForm}
     >
+      {isButtonVisible && (
+        <ReferenceForm handleReference={handleScrollToForm}></ReferenceForm>
+      )}
       <Typography
         textTransform={"uppercase"}
         variant="h4"
