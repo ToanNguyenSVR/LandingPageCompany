@@ -9,6 +9,8 @@ import { useState, useEffect, useRef } from "react";
 import { useTrail, animated } from "@react-spring/web";
 import { useInView } from "react-intersection-observer";
 import AdBanner from "@/components/Adsense/AdBanner";
+import AdBannerFirst from "@/components/Adsense/AdBannerFirst";
+import AdBannerSecond from "@/components/Adsense/AdBannerSecond";
 
 const About1 = "http://phototimevn.com/landingpageImage/intro1.jpg";
 const About2 = "http://phototimevn.com/landingpageImage/intro2.jpg";
@@ -90,11 +92,8 @@ const HomePage = () => {
 
   return (
     <>
-      <AdBanner
-        dataAdFormat="auto"
-        dataFullWidthResponsive={true}
-        dataAdSlot="4284247248"
-      ></AdBanner>
+      <AdBannerFirst></AdBannerFirst>
+      <AdBannerSecond></AdBannerSecond>
       <Box
         height={"100%"}
         id="home"

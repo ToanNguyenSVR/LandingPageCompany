@@ -16,7 +16,7 @@ const nextConfig = {
     domains: ["phototimevn.com"],
   },
   trailingSlash: true,
-  output: "export",
+  // output: "export",
 };
 
 export default withNextIntl(nextConfig);
