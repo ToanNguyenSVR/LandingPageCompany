@@ -18,6 +18,11 @@ export default function RootLayout({ children }: Props) {
           content="telephone=no, date=no, email=no, address=no"
         />
         <link rel="icon" href="/logo-icon.png" />
+        <script
+            async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2616007717038279"
+            crossOrigin="anonymous"
+          ></script>
       </Head>
       <body>
         <script

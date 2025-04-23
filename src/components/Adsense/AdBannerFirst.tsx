@@ -15,7 +15,7 @@ const AdBannerFirst = () => {
     <>
       <ins
         className="adsbygoogle"
-        // style={{ display: "block" }}
+         style={{ display: "block" }}
         data-ad-client="ca-pub-2616007717038279"
         data-ad-slot="5467936750"
         data-ad-format="auto"
