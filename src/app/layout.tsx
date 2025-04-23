@@ -22,7 +22,11 @@ export default function RootLayout({ children }: Props) {
             content="telephone=no, date=no, email=no, address=no"
           />
           <link rel="icon" href="/logo-icon.png" />
-          <Adsence pId="6348771383125578"></Adsence>
+          <script
+            async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2616007717038279"
+            crossOrigin="anonymous"
+          ></script>
         </head>
         <body>{children}</body>
       </html>

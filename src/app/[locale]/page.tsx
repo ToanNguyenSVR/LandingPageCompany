@@ -14,6 +14,16 @@ export default function Index() {
   return (
     <Box>
       <Header />
+      <ins
+        className="adsbygoogle"
+        style={{ display: "block" }}
+        data-ad-client="ca-pub-2616007717038279"
+        data-ad-slot="4407560971"
+        data-ad-format="auto"
+        data-full-width-responsive="true"
+      ></ins>
+
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
       <HomePage />
       <UsagePage />
       <AppPage />
