@@ -9,6 +9,7 @@ export default function RootLayout({ children }: Props) {
   return (
     <html lang="en">
       <head>
+     
         <title>PHOTO TIME</title>
         <meta charSet="utf-8" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />

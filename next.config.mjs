@@ -8,5 +8,8 @@ const nextConfig = {
         styledComponents: true,
     }
 };
-
+// module.exports = {
+//     // Your existing config
+//     exportTrailingSlash: true, // Optional: add trailing slash to URLs
+//   };
 export default withNextIntl(nextConfig);
